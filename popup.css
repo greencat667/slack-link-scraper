@@ -1,0 +1,139 @@
+:root {
+  color-scheme: light;
+  --bg: #0e1a12;
+  --panel: #15251a;
+  --accent: #c7ff7b;
+  --accent-2: #7bd3ff;
+  --text: #e9f3ee;
+  --muted: #9eb3a5;
+  --border: #2b3d31;
+  --shadow: rgba(15, 25, 18, 0.45);
+  --font: "Trebuchet MS", "Verdana", "Geneva", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  width: 360px;
+  font-family: var(--font);
+  background: radial-gradient(circle at top, #203526 0%, #0b140f 65%);
+  color: var(--text);
+}
+
+body.sidepanel {
+  width: 100%;
+  min-width: 320px;
+}
+
+.header {
+  padding: 12px 12px 16px;
+  background: linear-gradient(120deg, #1b2f21 0%, #17251c 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px var(--shadow);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.section {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.radio,
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text);
+}
+
+textarea {
+  width: 100%;
+  background: #0c1410;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px;
+  color: var(--text);
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  resize: vertical;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #0d1712;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #122018;
+}
+
+button.primary {
+  background: linear-gradient(120deg, #90ffbd 0%, #c7ff7b 100%);
+  color: #0a1410;
+  font-weight: 700;
+  border-color: #c7ff7b;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--accent-2);
+  min-height: 16px;
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.footer {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slack Link Scraper</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body class="sidepanel">
+    <header class="header">
+      <div class="title">Slack Link Scraper</div>
+      <div class="subtitle">Extract links from the current Slack tab.</div>
+    </header>
+
+    <section class="section">
+      <label class="label">Scope</label>
+      <div class="row">
+        <label class="radio">
+          <input type="radio" name="scope" value="auto" checked />
+          Auto (thread if open)
+        </label>
+        <label class="radio">
+          <input type="radio" name="scope" value="channel" />
+          Channel only
+        </label>
+        <label class="radio">
+          <input type="radio" name="scope" value="thread" />
+          Thread only
+        </label>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" id="visibleOnly" />
+        Visible messages only
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="loadAll" />
+        Attempt to load full history (slow)
+      </label>
+    </section>
+
+    <section class="section">
+      <label class="label" for="excludePatterns">Exclude domains (wildcards, one per line)</label>
+      <textarea id="excludePatterns" rows="4" placeholder="*.google.com&#10;example.com"></textarea>
+      <div class="hint">Use * as a wildcard. Matches on host only.</div>
+    </section>
+
+    <section class="section">
+      <label class="label">Output format</label>
+      <div class="row">
+        <label class="radio">
+          <input type="radio" name="format" value="md" checked />
+          Markdown
+        </label>
+        <label class="radio">
+          <input type="radio" name="format" value="html" />
+          HTML
+        </label>
+        <label class="radio">
+          <input type="radio" name="format" value="csv" />
+          CSV
+        </label>
+      </div>
+    </section>
+
+    <section class="section">
+      <button id="scrapeBtn" class="primary">Scrape Links</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="section">
+      <label class="label" for="output">Output</label>
+      <textarea id="output" rows="10" readonly></textarea>
+      <div class="row">
+        <button id="copyBtn">Copy</button>
+        <button id="downloadBtn">Download</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Tip: Open Slack in the browser at app.slack.com.
+    </footer>
+
+    <script src="ui.js"></script>
+  </body>
+</html>

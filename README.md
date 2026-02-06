@@ -2,7 +2,7 @@
 
 Extract links from Slack web channels or threads and export as Markdown, HTML, or CSV.
 
-![Slack Link Scraper screenshot](assets/screenshot.svg)
+![Slack Link Scraper screenshot](assets/screenshot.png)
 
 ## Install (Chrome)
 1. Open `chrome://extensions`.

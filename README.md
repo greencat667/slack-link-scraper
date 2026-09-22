@@ -34,3 +34,6 @@ Extract links from Slack web channels or threads and export as Markdown, HTML, o
 
 ## Privacy
 This extension runs entirely in your browser. It does not send data to any external servers.
+
+## License
+MIT — see [LICENSE](LICENSE).
